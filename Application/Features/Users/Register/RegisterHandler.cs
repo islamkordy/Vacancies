@@ -2,7 +2,7 @@
 using FluentValidation;
 using MediatR;
 using Persistence.IRepositories;
-using WadaieApp.Application.Utils;
+using Application.Utils;
 
 namespace Application.Features.User.Register;
 

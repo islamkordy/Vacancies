@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
 
 
-namespace WadaieApp.Domain.Specifications
+namespace Domain.Specifications
 {
     public abstract class BaseSpecifications<T> where T : class
     {

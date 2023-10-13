@@ -1,5 +1,4 @@
 ﻿using System.Linq.Expressions;
-using WadaieApp.Domain.Specifications;
 
 namespace Persistence.IRepositories;
 

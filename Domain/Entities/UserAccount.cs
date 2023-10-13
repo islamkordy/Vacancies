@@ -18,12 +18,15 @@ namespace Domain.Entities
         public string? CreatedBy { get; set; }
         public DateTime? UpdatedAt { get; set; }
         public string? UpdatedBy { get; set; }  
-
-        public int? RoleId { get; set; }
         public string? FullName { get; set; }
         public string? MobileNumber { get; set; }
 
+        public int? RoleId { get; set; }
+
         public virtual UserRole? Role { get; set; }
+        public virtual Employer Employer { get; set; }
+        public virtual Applicant Applicant { get; set; }
+
         public void GeneretePassword(string? PasswordSalt, string? PasswordHash)
         {
             this.PwdHash= PasswordHash;

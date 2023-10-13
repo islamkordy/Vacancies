@@ -1,6 +1,7 @@
 ﻿using Application.Common.Behaviors;
 using Application.Features.User.Register;
 using Application.Features.Users.Login;
+using Application.Features.Vacancies.Commands;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +21,7 @@ namespace Application
 
             services.AddScoped<IValidator<LoginCommand>, LoginIValidator>();
             services.AddScoped<IValidator<RegisterCommand>, RegisterValidator>();
+            services.AddScoped<IValidator<AddVacancyCommand>, AddVacancyValidator>();
 
         }
     }

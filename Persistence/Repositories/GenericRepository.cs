@@ -2,7 +2,6 @@
 using Persistence.Context;
 using Persistence.IRepositories;
 using System.Linq.Expressions;
-using WadaieApp.Domain.Specifications;
 
 namespace Persistence.Repositories;
 internal class GenericRepository<T> : IGenericRepository<T> where T : class

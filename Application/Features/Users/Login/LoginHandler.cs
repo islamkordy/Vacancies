@@ -1,12 +1,12 @@
 ﻿using Application.Features.User.DTO;
 using Application.Features.User.TokenService.Abstract;
+using Application.Utils;
 using Domain.Entities;
 using FluentValidation;
 using MediatR;
 using Persistence.IRepositories;
 using System.Security.Cryptography;
 using System.Text;
-using WadaieApp.Application.Utils;
 
 namespace Application.Features.Users.Login
 {

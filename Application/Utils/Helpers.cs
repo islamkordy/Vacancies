@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace WadaieApp.Application.Utils
+namespace Application.Utils
 {
     public static class Helpers
     {
