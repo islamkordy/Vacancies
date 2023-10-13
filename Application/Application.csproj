@@ -7,13 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <Compile Remove="IRepositories\**" />
+    <EmbeddedResource Remove="IRepositories\**" />
+    <None Remove="IRepositories\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.2" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.0.2" />
+	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Persistence\Persistence.csproj" />
   </ItemGroup>
 
 </Project>

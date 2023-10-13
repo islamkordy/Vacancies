@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using Application.Common.Behaviors;
+﻿using Application.Common.Behaviors;
+using Application.Features.User.Register;
+using Application.Features.Users.Login;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace Application
 {
@@ -19,6 +16,11 @@ namespace Application
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidatorBehavior<,>));
+
+
+            services.AddScoped<IValidator<LoginCommand>, LoginIValidator>();
+            services.AddScoped<IValidator<RegisterCommand>, RegisterValidator>();
+
         }
     }
 }
